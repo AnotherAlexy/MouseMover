@@ -1,6 +1,7 @@
 package com.company;
 
 import java.awt.*;
+import java.time.LocalDateTime;
 
 public class Main {
 
@@ -28,7 +29,7 @@ public class Main {
         System.out.println(dx + " " + dy);
         robot.mouseMove(p.x + dx, p.y + dy);
         prevLocation = new Point(MouseInfo.getPointerInfo().getLocation());
-        System.out.println(p + " -> " + prevLocation);
+        System.out.println(LocalDateTime.now() + ": " + p + " -> " + prevLocation);
     }
 
     private static void checkPos(PointerInfo pointerInfo) {
